@@ -72,6 +72,7 @@ weatherApp.controller('weatherController', function ($scope, $http) {
             };
             var tooltip = {
                 valueSuffix: '\xB0C'
+
             }
             var legend = {
                 layout: 'vertical',

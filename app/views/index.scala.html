@@ -17,6 +17,14 @@
    float: left;
    padding: 3px;
    border: 1px solid black;
+   text-align: center;
+   }
+   .menu1 {
+   width: 50%;
+   float: left;
+   padding: 0.3px;
+   border: 1px solid black;
+   text-align: center;
    }
    .main {
    width: 50%;
@@ -41,7 +49,7 @@
    padding: 10px;
    }
    </style>
-   <title>Simple Map</title>
+   <title>Weather App</title>
   </head>
   <body>
     <div class="container" ng-app="weatherApp" ng-controller="weatherController">
@@ -58,12 +66,13 @@
       &nbsp;
       <div ng-disabled="showMap">
         <div class="row">
-          <div class="col menu">City</div>
-          <div class="col menu">Temparature</div>
+          <div class="col menu"> <td align="center"><b>City</b></td></div>
+          <div class="col menu1" ><td align=center><b>Temprature</b></td></div>
         </div>
         <div class="row" ng-repeat="n in finalData">
           <div id="map" class="col main" ng-bind-html="initMap(n.lat, n.lon)"></div>
-          <div id = "container" class="col main1" ng-bind-html="graph(n.tempList)">Average Temperature : {{n.averageTemp}}</div>
+          <div id = "container" class="col main1" ng-bind-html="graph(n.tempList)"></div>
+
           @*<div class="col main">*@
             @*<div class="main">Average Temperature:{{n.averageTemp}}</div>*@
           @*</div>*@
